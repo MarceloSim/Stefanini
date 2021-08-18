@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210818 11:53:01.126" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="c:\teste-web\swaglabs\tests">
+<suite id="s1-s1" name="cadastroEfetuado" source="c:\teste-web\swaglabs\tests\cadastroEfetuado.robot">
+<test id="s1-s1-t1" name="Cenario7: Validar cabeçalho">
+<kw name="Abrir Navegador" library="cadastroEfetuado" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:53:01.290" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:53:01.290" endtime="20210818 11:53:03.219"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210818 11:53:03.219" endtime="20210818 11:53:03.345"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:01.279" endtime="20210818 11:53:03.345"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="cadastroEfetuado">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:53:03.345" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:53:03.345" endtime="20210818 11:53:09.053"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:03.345" endtime="20210818 11:53:09.053"/>
+</kw>
+<kw name="Quando verifico a existencia do texto" library="cadastroEfetuado">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div[1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 11:53:09.081" level="INFO">Element '//*[@id="root"]/div/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20210818 11:53:09.053" endtime="20210818 11:53:09.081"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:09.053" endtime="20210818 11:53:09.081"/>
+</kw>
+<kw name="Fechar Navegador" library="cadastroEfetuado" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:53:12.340" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:53:09.082" endtime="20210818 11:53:12.340"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:53:12.340" endtime="20210818 11:53:14.476"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:09.081" endtime="20210818 11:53:14.476"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:01.279" endtime="20210818 11:53:14.476"/>
+</test>
+<test id="s1-s1-t2" name="Cenario8: Validar cadastro efetuado com sucesso">
+<kw name="Abrir Navegador" library="cadastroEfetuado" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:53:14.476" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:53:14.476" endtime="20210818 11:53:16.374"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210818 11:53:16.374" endtime="20210818 11:53:16.497"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:14.476" endtime="20210818 11:53:16.497"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="cadastroEfetuado">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:53:16.497" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:53:16.497" endtime="20210818 11:53:21.810"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:16.497" endtime="20210818 11:53:21.811"/>
+</kw>
+<kw name="Quando preencho o campo nome &quot;Marcelo Sim&quot;" library="cadastroEfetuado" sourcename="Quando preencho o campo nome &quot;${nome}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="name"]</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:21.812" level="INFO">Typing text 'Marcelo Sim' into text field '//*[@id="name"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:21.811" endtime="20210818 11:53:21.890"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:21.811" endtime="20210818 11:53:21.890"/>
+</kw>
+<kw name="E preencho o campo e-mail&quot;marcelo.sim@teste.com&quot;" library="cadastroEfetuado" sourcename="E preencho o campo e-mail&quot;${e-mail}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="email"]</arg>
+<arg>${e-mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:21.894" level="INFO">Typing text 'marcelo.sim@teste.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:21.894" endtime="20210818 11:53:21.956"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:21.890" endtime="20210818 11:53:21.956"/>
+</kw>
+<kw name="E preencho o campo senha &quot;12345678&quot;" library="cadastroEfetuado" sourcename="E preencho o campo senha &quot;${senha}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="password"]</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:21.956" level="INFO">Typing text '12345678' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:21.956" endtime="20210818 11:53:22.008"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:21.956" endtime="20210818 11:53:22.008"/>
+</kw>
+<kw name="Então clico em cadastrar" library="cadastroEfetuado">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:22.008" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:22.008" endtime="20210818 11:53:22.055"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div[2]/h2[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 11:53:22.071" level="INFO">Element '//*[@id="root"]/div/div/div[2]/h2[2]' is displayed.</msg>
+<status status="PASS" starttime="20210818 11:53:22.055" endtime="20210818 11:53:22.071"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:53:22.071" endtime="20210818 11:53:22.071"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:22.008" endtime="20210818 11:53:22.071"/>
+</kw>
+<kw name="Fechar Navegador" library="cadastroEfetuado" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:53:24.997" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:53:22.071" endtime="20210818 11:53:24.997"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:53:24.997" endtime="20210818 11:53:27.675"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:22.071" endtime="20210818 11:53:27.675"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:14.476" endtime="20210818 11:53:27.675"/>
+</test>
+<doc>Suite dos testes de cadastro</doc>
+<status status="PASS" starttime="20210818 11:53:01.141" endtime="20210818 11:53:27.676"/>
+</suite>
+<suite id="s1-s2" name="campoDadoInvalido" source="c:\teste-web\swaglabs\tests\campoDadoInvalido.robot">
+<test id="s1-s2-t1" name="Cenario1: Validar mensagem de dado invalido para nome">
+<kw name="Abrir Navegador" library="campoDadoInvalido" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>maximized</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:53:27.684" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:53:27.683" endtime="20210818 11:53:29.611"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:27.683" endtime="20210818 11:53:29.611"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="campoDadoInvalido">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:53:29.612" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:53:29.612" endtime="20210818 11:53:33.665"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:29.611" endtime="20210818 11:53:33.665"/>
+</kw>
+<kw name="Quando preencho o campo nome com um dado invalido &quot;marcelo&quot;" library="campoDadoInvalido" sourcename="Quando preencho o campo nome com um dado invalido &quot;${nome}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="name"]</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:33.665" level="INFO">Typing text 'marcelo' into text field '//*[@id="name"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:33.665" endtime="20210818 11:53:33.747"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:33.747" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:33.747" endtime="20210818 11:53:33.784"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:33.665" endtime="20210818 11:53:33.785"/>
+</kw>
+<kw name="Então devo ver a mensagem de nome invalido" library="campoDadoInvalido">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Por favor, insira um nome completo</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:53:33.785" endtime="20210818 11:53:33.795"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:33.785" endtime="20210818 11:53:33.795"/>
+</kw>
+<kw name="Fechar Navegador" library="campoDadoInvalido" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:53:37.392" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:53:33.796" endtime="20210818 11:53:37.392"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:53:37.392" endtime="20210818 11:53:39.518"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:33.795" endtime="20210818 11:53:39.518"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:27.682" endtime="20210818 11:53:39.518"/>
+</test>
+<test id="s1-s2-t2" name="Cenario2: Validar mensagem de dado invalido para e-mail">
+<kw name="Abrir Navegador" library="campoDadoInvalido" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>maximized</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:53:39.520" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:53:39.520" endtime="20210818 11:53:41.412"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:39.520" endtime="20210818 11:53:41.412"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="campoDadoInvalido">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:53:41.413" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:53:41.413" endtime="20210818 11:53:45.306"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:41.412" endtime="20210818 11:53:45.306"/>
+</kw>
+<kw name="Quando preencho o campo e-mail com um dado invalido &quot;ksdjfg&quot;" library="campoDadoInvalido" sourcename="Quando preencho o campo e-mail com um dado invalido &quot;${e-mail}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="email"]</arg>
+<arg>${e-mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:45.307" level="INFO">Typing text 'ksdjfg' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:45.306" endtime="20210818 11:53:45.379"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:45.379" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:45.379" endtime="20210818 11:53:45.417"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:45.306" endtime="20210818 11:53:45.417"/>
+</kw>
+<kw name="Então devo ver a mensagem de e-mail invalido" library="campoDadoInvalido">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Por favor, insira um e-mail válido.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:53:45.417" endtime="20210818 11:53:45.417"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:45.417" endtime="20210818 11:53:45.417"/>
+</kw>
+<kw name="Fechar Navegador" library="campoDadoInvalido" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:53:49.075" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:53:45.433" endtime="20210818 11:53:49.075"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:53:49.075" endtime="20210818 11:53:51.194"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:45.433" endtime="20210818 11:53:51.194"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:39.519" endtime="20210818 11:53:51.194"/>
+</test>
+<test id="s1-s2-t3" name="Cenario3: Validar mensagem de dado invalido para senha">
+<kw name="Abrir Navegador" library="campoDadoInvalido" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>maximized</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:53:51.197" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:53:51.197" endtime="20210818 11:53:53.076"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:51.194" endtime="20210818 11:53:53.076"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="campoDadoInvalido">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:53:53.077" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:53:53.077" endtime="20210818 11:53:58.823"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:53.077" endtime="20210818 11:53:58.823"/>
+</kw>
+<kw name="Quando preencho o campo senha com um dado invalido &quot;abcd&quot;" library="campoDadoInvalido" sourcename="Quando preencho o campo senha com um dado invalido &quot;${senha}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="password"]</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:58.824" level="INFO">Typing text 'abcd' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:58.823" endtime="20210818 11:53:58.902"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:53:58.902" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:53:58.902" endtime="20210818 11:53:58.933"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:58.823" endtime="20210818 11:53:58.933"/>
+</kw>
+<kw name="Então devo ver a mensagem de senha invalido" library="campoDadoInvalido">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>A senha deve conter ao menos 8 caracteres.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:53:58.933" endtime="20210818 11:53:58.949"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:58.933" endtime="20210818 11:53:58.949"/>
+</kw>
+<kw name="Fechar Navegador" library="campoDadoInvalido" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:54:01.084" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:53:58.949" endtime="20210818 11:54:01.085"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:54:01.085" endtime="20210818 11:54:03.903"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:58.949" endtime="20210818 11:54:03.903"/>
+</kw>
+<status status="PASS" starttime="20210818 11:53:51.194" endtime="20210818 11:54:03.903"/>
+</test>
+<doc>Suite dos testes de dados invalidos dos campos</doc>
+<status status="PASS" starttime="20210818 11:53:27.677" endtime="20210818 11:54:03.903"/>
+</suite>
+<suite id="s1-s3" name="campoObrigatorio" source="c:\teste-web\swaglabs\tests\campoObrigatorio.robot">
+<test id="s1-s3-t1" name="Cenario: Validar mensagem de campo nome obrigatório">
+<kw name="Abrir Navegador" library="campoObrigatorio" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>maximized</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:54:03.932" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:54:03.932" endtime="20210818 11:54:05.842"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:03.924" endtime="20210818 11:54:05.842"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="campoObrigatorio">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:54:05.843" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:54:05.843" endtime="20210818 11:54:09.817"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:05.842" endtime="20210818 11:54:09.817"/>
+</kw>
+<kw name="Quando clico em cadastrar" library="campoObrigatorio">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:54:09.818" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:54:09.818" endtime="20210818 11:54:09.857"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:09.817" endtime="20210818 11:54:09.857"/>
+</kw>
+<kw name="Então devo ver a mensagem nome obrigatório" library="campoObrigatorio">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>O campo Nome é obrigatório.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:54:09.857" endtime="20210818 11:54:09.873"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:09.857" endtime="20210818 11:54:09.873"/>
+</kw>
+<kw name="Fechar Navegador" library="campoObrigatorio" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:54:13.525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:54:09.873" endtime="20210818 11:54:13.525"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:54:13.525" endtime="20210818 11:54:15.627"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:09.873" endtime="20210818 11:54:15.627"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:03.924" endtime="20210818 11:54:15.627"/>
+</test>
+<test id="s1-s3-t2" name="Cenario: Validar mensagem de campo E-mail obrigatório">
+<kw name="Abrir Navegador" library="campoObrigatorio" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>maximized</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:54:15.629" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:54:15.629" endtime="20210818 11:54:17.516"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:15.627" endtime="20210818 11:54:17.516"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="campoObrigatorio">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:54:17.517" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:54:17.517" endtime="20210818 11:54:21.510"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:17.517" endtime="20210818 11:54:21.510"/>
+</kw>
+<kw name="Quando clico em cadastrar" library="campoObrigatorio">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:54:21.511" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:54:21.510" endtime="20210818 11:54:21.545"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:21.510" endtime="20210818 11:54:21.545"/>
+</kw>
+<kw name="Então devo ver a mensagem e-mail obrigatório" library="campoObrigatorio">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>O campo E-mail é obrigatório.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:54:21.545" endtime="20210818 11:54:21.561"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:21.545" endtime="20210818 11:54:21.561"/>
+</kw>
+<kw name="Fechar Navegador" library="campoObrigatorio" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:54:25.226" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:54:21.561" endtime="20210818 11:54:25.226"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:54:25.226" endtime="20210818 11:54:27.355"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:21.561" endtime="20210818 11:54:27.355"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:15.627" endtime="20210818 11:54:27.355"/>
+</test>
+<test id="s1-s3-t3" name="Cenario: Validar mensagem de campo senha obrigatório">
+<kw name="Abrir Navegador" library="campoObrigatorio" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<arg>maximized</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 11:54:27.358" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210818 11:54:27.358" endtime="20210818 11:54:29.282"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:27.355" endtime="20210818 11:54:29.282"/>
+</kw>
+<kw name="Dado que acesso a página inicial" library="campoObrigatorio">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://prova.stefanini-jgr.com.br/teste/qa/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210818 11:54:29.283" level="INFO">Opening url 'http://prova.stefanini-jgr.com.br/teste/qa/'</msg>
+<status status="PASS" starttime="20210818 11:54:29.283" endtime="20210818 11:54:33.260"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:29.282" endtime="20210818 11:54:33.260"/>
+</kw>
+<kw name="Quando clico em cadastrar" library="campoObrigatorio">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210818 11:54:33.260" level="INFO">Clicking element '//*[@id="register"]'.</msg>
+<status status="PASS" starttime="20210818 11:54:33.260" endtime="20210818 11:54:33.307"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:33.260" endtime="20210818 11:54:33.307"/>
+</kw>
+<kw name="Então devo ver a mensagem senha obrigatório" library="campoObrigatorio">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>O campo Senha é obrigatório.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210818 11:54:33.307" endtime="20210818 11:54:33.316"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:33.307" endtime="20210818 11:54:33.316"/>
+</kw>
+<kw name="Fechar Navegador" library="campoObrigatorio" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 11:54:37.005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 11:54:33.317" endtime="20210818 11:54:37.005"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 11:54:37.005" endtime="20210818 11:54:39.129"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:33.316" endtime="20210818 11:54:39.129"/>
+</kw>
+<status status="PASS" starttime="20210818 11:54:27.355" endtime="20210818 11:54:39.129"/>
+</test>
+<doc>Suite dos testes de obrigatoriedade dos campos</doc>
+<status status="PASS" starttime="20210818 11:54:03.906" endtime="20210818 11:54:39.130"/>
+</suite>
+<status status="PASS" starttime="20210818 11:53:01.126" endtime="20210818 11:54:39.132"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="cadastroEfetuado">Tests.cadastroEfetuado</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="campoDadoInvalido">Tests.campoDadoInvalido</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s3" name="campoObrigatorio">Tests.campoObrigatorio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
